@@ -263,12 +263,34 @@ body{
 
 
 /*A partir de aquí va el css para aplicar a su sección*/
+
 main{
     /*te recomiendo dejar estas 2 tal cual*/
     margin-top: 12vh;
     flex-grow: 1;
     /*segui agregando opciones acá abajo*/
+    height: 100% ;
+    width: 100%;
+}
 
+.div-Titulo{
 
+  text-align: center;
+  background-color: yellow;
+}
+.div-contenedor{
+    height: 80vh ;
+    width: 100%;
+   
+    text-align: center;
+    background-color: yellowgreen;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+.div-main{
 
+    background-color: blue;
 }
