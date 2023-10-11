@@ -268,7 +268,90 @@ main{
     margin-top: 12vh;
     flex-grow: 1;
     /*segui agregando opciones acá abajo*/
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(20, 31, 43);
+}
 
+.portada{
+    height: 65vh;
+    width: 100%;
+    margin-bottom: 2vh;
+    display: flex;
+    justify-content: last baseline;
+    align-items: center;
+    background-image: url(../img/portada-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.portada-text{
+    height: 40vh;
+    width: 25%;
+    margin-left: 70%;
+    background-color: rgba(27, 43, 59, 0.7);
+    align-self: flex-start;
+}
 
+.div-product{
+    height: 50vh;
+    width: 100%;
+    margin: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.div-product h2{
+    width: 100%;
+    color: white;
+    background-color: rgb(73, 39, 104);
+    text-align: center;
+}
 
+.galeria{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(196, 173, 218);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.galeria div{
+    height: 100%;
+    width: 45%;
+    background-color: rgb(21, 4, 36);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-historia{
+    height: 25vh;
+    width: 100%;
+    margin-top: 3vh;
+    color: aliceblue;
+    background-color: black;
+    text-align: left;
+}
+
+.sucursales{
+    height: 30vh;
+    width: 100%;
+    margin: 2vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.sucursales div{
+    height: 95%;
+    width: 32%;
+    background-color: rgb(14, 49, 38);
+    text-align: center;
 }
