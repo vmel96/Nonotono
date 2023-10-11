@@ -268,7 +268,72 @@ main{
     margin-top: 12vh;
     flex-grow: 1;
     /*segui agregando opciones acá abajo*/
-
-
-
+    width: 100%;
+    background-image: url('../img/img_productos/fondo\ alfajores\ dorado.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+.h1 {
+    color: #000000;
+    background-color:rgb(189, 92, 92);
+    font-family:'Franklin Gothic Medium';
+    width: 100%;
+    padding: 2%;
+    height: auto;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    justify-content: space-around;
+    width: 15em;
+    height: 18em;
+    background-color:white;
+    border-radius: 0px 30px 0px 30px;
+    padding: 20px;
+    transition: background-color 0.3s;
+    font-family: 'Street',sans-serif; 
+    text-align: center;
+    margin: 15px;
+    box-sizing: border-box;
+    border: 2px solid rgb(235, 233, 233);
+    transition: opacity 0.5s;
+    font-weight: bold;
+}
+
+.card:hover {
+    background-color: #ffffe0;
+}
+
+.img {
+    width: 80%;
+    height: 80%;
+    border-radius: 0px 30px 0px 30px;
+    object-fit: cover;
+}
+.button {
+    background-color: #fff6c4;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: black;
+    
+}
+.button:hover a {
+    color: white; /* Cambia a tu color deseado */
+    text-decoration: none; /* Opcional: quita la subrayado del enlace */
+  }
