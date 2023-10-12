@@ -266,9 +266,44 @@ body{
 main{
     /*te recomiendo dejar estas 2 tal cual*/
     margin-top: 12vh;
-    flex-grow: 1;
+    flex-grow: 1;    
     /*segui agregando opciones acá abajo*/
+}
 
+.superior {
+    background: #ababab;
+    height: 36.5vh;
+    width: 100%;
+    text-align: center;
+    position:relative
 
+}
 
+.inferior {
+    width: 100%;
+    height: 51.5vh;  
+    background-color: white;
+    padding-top: 2em;
+
+}   
+
+.pantalladividida {
+    display: flex;
+    flex-direction: column;
+
+}
+.superiortexto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.conoce {
+    color:white;
+
+}
+.nuestras-redes {
+    font-size: 90px;
+    padding-bottom: 20px;
+    line-height: 85%;
 }
