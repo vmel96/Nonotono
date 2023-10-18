@@ -252,9 +252,10 @@ footer {
 
 /*Configuracion del body*/
 body{
+
     width: 100%;
     min-height: 100vh;
-    background-color: rgb(189, 92, 92);
+    background-color: rgb(0, 0, 0);
     display:flex;
     flex-direction: column;
 }
@@ -272,40 +273,297 @@ main{
 }
 
 .superior {
-    background: #ababab;
+    background-image: url("../img/ALFAJORE.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 36.5vh;
     width: 100%;
     text-align: center;
-    position:relative;
-
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
 .inferior {
     width: 100%;
     height: 51.5vh;  
+    background-image: url("../img/Fondotexturaestrellas.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: white;
     padding-top: 2em;
-
 }   
 
 .pantalladividida {
     display: flex;
     flex-direction: column;
-
 }
+
 .superiortexto {
     flex-grow: 0;
     position: absolute;
+    white-space: nowrap;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);    
 }
+
 .conoce {
     color:white;
+    font-family: 'Convergence', sans-serif;
+    font-style: italic;    
+    font-size: 20px;
+}
 
-}
 .nuestras-redes {
-    font-size: 90px;
-    padding-bottom: 20px;
-    line-height: 85%;
+    font-size: 61px;
+    line-height: 140%;
+    font-weight: bold;
+    color:white;
+    font-family: 'Convergence', sans-serif;
+    text-shadow: 2px 5px 3px rgba(0, 0, 0, 0.5);
 }
+
+.superiortexto {
+    transform: translate(-50%, -50%);
+}
+
+.nuestras-redes{
+    animation: text 3s 1;
+}
+
+@keyframes text {
+    0%{
+        color:rgba(0, 0, 0, 0);
+        text-shadow: 2px 5px 3px rgba(0, 0, 0, 0);
+        margin-bottom: -10px;
+    }
+    30%{
+        letter-spacing: 15px;
+        margin-bottom: -20px;
+    }
+    85%{
+        letter-spacing: 5px;
+        margin-bottom: -20px;
+    }
+}
+
+.conoce{
+    animation: text2 4s 1;
+}
+
+@keyframes text2 {
+    0%{
+        color:rgba(0, 0, 0, 0);
+    }
+    70%{
+        color:rgba(0, 0, 0, 0);
+    }
+}
+
+    /*ESTILOS BOTÓN INSTAGRAM*/
+.ov-btn-slide-left {
+    background: #000000; /* color de fondo */
+    color: #ffffff; /* color de fuente */
+    padding: 16px 20px;
+    border-radius: 9px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    font-family: 'Street', sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.15em;
+}
+
+.ov-btn-slide-left:hover {
+    color: #000000; /* color de fuente hover */
+}
+
+.ov-btn-slide-left::after {
+    content: "";
+    background: #ffffff; /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 100%;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+}
+
+.ov-btn-slide-left:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+}
+/*FIN ESTILOS BOTÓN INSTAGRAM*/
+
+/*TRANSICION DE BOTON INSTAGRAM*/
+.ov-btn-slide-left {
+    animation: animacionboton 4.5s 1;
+}
+@keyframes animacionboton {
+    0%{
+        color:rgba(0, 0, 0, 0);
+        background: #00000000;
+        color: #ffffff00;
+    }
+    70%{
+        color:rgba(0, 0, 0, 0);
+        background: #00000000;
+        color: #ffffff00;
+    }
+    90%{
+        color:rgba(0, 0, 0, 0);
+        background: #00000000;
+        color: #ffffff00;
+    }
+}
+
+.ov-btn-slide-left::after{
+    animation: animacionbotonblanco 5s 1;
+}
+
+@keyframes animacionbotonblanco {
+    0%{
+        background:rgba(0, 0, 0, 0);
+    }
+    70%{
+        background:rgba(0, 0, 0, 0);
+    }
+    90%{
+        background:rgba(0, 0, 0, 0);
+    }
+}
+/*FIN TRANSICION DE BOTON INSTAGRAM*/
+
+/* ESTILOS BOTÓN FACEBOOK */
+.ov-btn-slide-left2 {
+    background: #000000; /* color de fondo */
+    color: #ffffff; /* color de fuente */
+    padding: 16px 20px;
+    border-radius: 9px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    font-family: 'Street', sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.15em;
+}
+
+.ov-btn-slide-left2:hover {
+    color: #000000; /* color de fuente hover */
+}
+
+.ov-btn-slide-left2::after {
+    content: "";
+    background: #ffffff; /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 100%;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+}
+
+.ov-btn-slide-left2:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+}
+/*FIN ESTILOS BOTÓN FACEBOOK***/
+
+/*TRANSICION DE BOTON FACEBOOK*/
+.ov-btn-slide-left2 {
+    animation: animacionboton2 4.5s 1;
+}
+@keyframes animacionboton2 {
+    0%{
+        color:rgba(0, 0, 0, 0);
+        background: #00000000;
+        color: #ffffff00;
+    }
+    70%{
+        color:rgba(0, 0, 0, 0);
+        background: #00000000;
+        color: #ffffff00;
+    }
+    90%{
+        color:rgba(0, 0, 0, 0);
+        background: #00000000;
+        color: #ffffff00;
+    }
+}
+
+.ov-btn-slide-left2::after{
+    animation: animacionbotonblanco2 5s 1;
+}
+@keyframes animacionbotonblanco2 {
+    0%{
+        background:rgba(0, 0, 0, 0);
+    }
+    70%{
+        background:rgba(0, 0, 0, 0);
+    }
+    90%{
+        background:rgba(0, 0, 0, 0);
+}
+}
+/*FIN TRANSICION DE BOTON FACEBOOK*/
+
+
+/*REDES ADAPTADO A CELULARES*/
+@media screen and (max-width: 720px) {
+    .superiortexto {
+        flex-grow: 0;
+        position: absolute;  
+    }
+    .superior-p {
+        white-space: nowrap;
+    }
+    .conoce {
+        font-size: 15px;
+    }
+    .nuestras-redes{
+        font-size: 40px;
+        text-shadow: 1px 3px 2px rgba(0, 0, 0, 0.5);
+    }
+    .inferior {
+        padding: auto;
+        height: auto;
+    }
+    .nuestras-redes{
+        animation: text 3s 1;
+    }
+    @keyframes text {
+        0%{
+            color:rgba(0, 0, 0, 0);
+            text-shadow: 2px 5px 3px rgba(0, 0, 0, 0);
+            margin-bottom: -10px;
+        }
+        20%{
+            letter-spacing: 3px;
+            margin-bottom: -20px;
+        }
+        70%{
+            letter-spacing: 4px;
+            margin-bottom: -20px;
+        }
+    }
+}
+    
