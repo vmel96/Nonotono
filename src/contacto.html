@@ -42,40 +42,44 @@
         <div class="contacto">
             <div class="form">
                 <h2>Contacto</h2>
-                <form action="#" id="form-contacto">
+                <form class="formulario" action="#" id="form-contacto">
                     <label for="nombre">Nombre:</label><br>
-                    <input type="text" id="nombre" name="nombre" required placeholder="Ingrese su nombre"><br>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ingrese su nombre" autocomplete="given-name"><br>
                     <span class="error" id="nombreError"></span><br>
 
                     <label for="apellido">Apellido:</label><br>
-                    <input type="text" id="apellido" name="apellido" required placeholder="Ingrese su apellido"><br>
+                    <input type="text" id="apellido" name="apellido" required placeholder="Ingrese su apellido" autocomplete="family-name"><br>
                     <span class="error" id="apellidoError"></span><br>
 
                     <label for="email">Correo electrónico:</label><br>
-                    <input type="email" id="email" name="email" required placeholder="ejemplo@mail.com"><br>
+                    <input type="email" id="email" name="email" required placeholder="ejemplo@mail.com" autocomplete="on"><br>
                     <span class="error" id="emailError"></span><br>
                     
                     <label for="telefono">Teléfono (opcional):</label><br>
-                    <input type="tel" id="telefono" name="telefono" pattern="[0-9]*" placeholder="Solo números sin espacios"><br>
+                    <input type="tel" id="telefono" name="telefono" pattern="[0-9]*" placeholder="Solo números sin espacios"><br><br>
 
                     <label for="mensaje">Mensaje: </label><br>
-                    <textarea name="mensaje" id="mensaje" rows="4" required placeholder="Escriba su mensaje aquí..."></textarea>
+                    <textarea name="mensaje" id="mensaje" rows="4" required placeholder=" Escriba su mensaje aquí..."></textarea>
                     <span class="error" id="mensajeError"></span><br>
-
-                    <div class="btn-enviar">
-                        <input type="submit" value="Enviar">
-                    </div>
                     
+                    <div class="btn-enviar">
+                        <button type="submit" value="Enviar" id="form-contacto">Enviar</button>
+                        <!--
+                        <input type="submit" value="Enviar" id="form-contacto">
+                        -->
+                    </div>
                 </form>
+
             </div>
             <div class="form-derecha">
                 <div class="form-p">
-                    <p>Llene el formulario y nos contactaremos con usted a la brevedad</p>
+                    <p>Envíanos tu mensaje por medio del formulario y nos contactaremos a la brevedad.</p>
                 </div>
                 <div class="form-p2">
-                    <p>Dejanos tus sugerencias o reclamos enviando un mail a:</p><br>
-                    <p>email@email.com.ar</p><br>
-                    <a href="#">O por medio de nuestras redes</a>
+                    <p>También podés dejar tus sugerencias o reclamos enviando un mail a: nonotonoalfajores@gmail.com</p><br>
+                    <p><img src="./img/email.png" alt="email-logo"></p><br>
+                    <p>O a través nuestras redes:</p>
+                    <a href="./redes.html"><img src="./img/redes-sociales-all.png" alt="redes-sociales-all"></a>
                 </div>
             </div>
         </div>
@@ -84,11 +88,11 @@
             <h2>Nuestros puntos de venta:</h2>
             <div class="dir-div">
                 <p>Dirección 1</p>
-                <img src="#" alt="">MAPA1
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104990.54774391904!2d-58.83590427880971!3d-34.681094852557074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc95434093dd6b%3A0x58d832f755e4a278!2sMerlo%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1697335591602!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="dir-div">
                 <p>Dirección 2</p>
-                <img src="#" alt="">MAPA2
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d820.3768994279127!2d-58.72939053046368!3d-34.66713639528891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbffad677f35b%3A0x83a79d2604d09c38!2sSuipacha%20755-801%2C%20B1722MWH%20Merlo%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1697336951825!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </main>

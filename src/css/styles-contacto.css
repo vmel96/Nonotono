@@ -20,6 +20,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 0 5px;
+    z-index: 1000;
 }
 
 .logoYtexto{
@@ -107,9 +108,13 @@ nav{
 }
 
 
-@media screen and (max-width: 720px){
+@media screen and (max-width: 800px){
     nav{
         position: fixed;
+    }
+    main{
+        height: auto;
+        width: 100%;
     }
     .menu-btn{
         height: 100%;
@@ -252,8 +257,8 @@ footer {
 /*Configuracion del body*/
 body{
     width: 100%;
-    min-height: 100vh;
-    background-color: rgb(189, 92, 92);
+    /*min-height: 100vh;*/
+    background-color: rgb(255, 255, 255);
     display:flex;
     flex-direction: column;
 }
@@ -265,50 +270,194 @@ body{
 /*A partir de aquí va el css para aplicar a su sección*/
 main{
     /*te recomiendo dejar estas 2 tal cual*/
+    width: 100%;
     margin-top: 12vh;
     flex-grow: 1;
     /*segui agregando opciones acá abajo*/
-    background-color: wheat;
+    background-image: url('../img/Fondotextura.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: whitesmoke;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+
 .contacto{
+    height: auto;
     width: 100%;
-    background-color: rgb(250, 200, 200);
+    font-family: 'Street', sans-serif;
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.form{
+    height: 90%;
+    width: 50%;
+    background-color: white;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.form h2{
+    color: rgb(255, 115, 73);
+    width: 95%;
+    margin: 5px;
+}
+.formulario{
+    height: 90%;
+    width: 95%;
+    color: rgb(65, 65, 65);
+    text-align: left;
+    padding: 5px;
+    background-color: white;
+}
+
+.btn-enviar{
+    width: 100%;
+    margin: 5px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
-.form{
-    width: 35%;
-    background-color: rgb(172, 172, 247);
+.btn-enviar button{
+    width: 30%;
+    padding: 10px;
+    font-family: 'Street', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 115, 73);
+    border-radius: 15px;
+    border: none;
+    text-align: center;
 }
-.btn-enviar{
-    text-align: end;
-}
-.form-derecha{
-    width: 35%;
-    background-color: rgb(130, 166, 243);
+.btn-enviar button:hover{
+    transition: ease 0.5s;
+    color: rgb(255, 238, 4);
+    background-color: #ff3300;
 }
 
-.direcciones{
-    width: 100%;
-    background-color: rgb(157, 238, 193);
+.formulario label, input, textarea, span{
+    width: 95%;
+    font-family: 'Street', sans-serif;
+    border-radius: 10px;
+    border-style: none;
+}
+
+textarea{
+    resize: vertical;
+    background-color: rgb(212, 212, 212);
+    opacity: 0.7;
+}
+
+input:focus, textarea:focus{
+    outline: 2px solid rgb(255, 115, 73);
+    font-family: 'Street', sans-serif;
+}
+
+.formulario input{
+    height: 20px;
+    padding: 5px;
+    background-color: rgb(212, 212, 212);
+    opacity: 0.7;
+}
+
+
+
+.form-derecha{
+    max-height: 90%;
+    width: 35%;
+    max-width: 35%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: start;
+    align-items: center;
+    text-align: center;
+    word-wrap: break-word;
+    padding: 5px;
+}
+.form-derecha p img{
+    height: 30px;
+    width: auto;
+    background-color: white;
+    border-radius: 25px;
+    padding: 8px;
+}
+.form-derecha a img{
+    height: auto;
+    width: 50px;
+
+}
+
+.form-p{
+    height: 30%;
+    width: 100%;
+    font-weight: bold;
+    color: rgb(255, 115, 73);
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+.form-p2{
+    height: 50%;
+    max-width: 100%;
+    margin-top: 10px;
+    color: white;
+    border-radius: 15px;
+}
+
+.direcciones{
+    height: auto;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-family: 'Street', sans-serif;
+    color: white;
+    margin: 25px 0px;
+    padding: 15px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 .dir-div{
-    margin: 5px;
-    background-color: rgb(241, 198, 133);
+    height: 300px;
     width: 90%;
+    margin-top: 5px;
+    background-color: rgb(121, 119, 118);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
+
+@media screen and (max-width: 800px){
+    .dir-div{
+        width: 90%;
+        margin-top: 5px;
+        background-color: rgb(121, 119, 118);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .dir-div p{
+        width: 100%;
+    }
+    .dir-div iframe{
+        width: 100%;
+    }
+}
+    
+
