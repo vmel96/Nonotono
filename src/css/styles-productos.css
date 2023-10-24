@@ -270,8 +270,8 @@ main{
     /*segui agregando opciones acá abajo*/
     width: 100%;
     background-image: url('/Nonotono/src/img/img_productos/Fondo\ textura\ estrellas.jpg');
-    background-size: auto;
-    background-repeat: cover 100% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-color: whitesmoke;
 }
 
@@ -345,11 +345,12 @@ main{
 .img {
     width: 15em;
     height: 13em;
-    object-fit: cover;
     border-radius: 0px 25px 0px 0px;
+    background-size: cover;
+    object-fit: cover;
 }
 .button {
-    background-color: #fff6c4;
+    background-color: #f6e896;
     color: #ffffff;
     text-decoration: none;
     border-radius: 10px;
