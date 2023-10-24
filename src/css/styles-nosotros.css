@@ -1,17 +1,18 @@
-*{
+* {
     padding: 0;
     margin: 0;
     text-decoration: none;
 }
+
 @font-face {
-    font-family: 'Street'; 
-    src: url('../font/STREET__.ttf') format('truetype'); 
+    font-family: 'Street';
+    src: url('../font/STREET__.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 /*CSS para la Barra de navegación */
-nav{
+nav {
     width: 100%;
     height: 12vh;
     position: fixed;
@@ -20,26 +21,28 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 0 5px;
+    z-index: 1000;
 }
 
-.logoYtexto{
+.logoYtexto {
     max-width: 20%;
     display: flex;
-    align-items:center;
-    justify-content:space-between;
+    align-items: center;
+    justify-content: space-between;
 }
-.divnav-logo{
+
+.divnav-logo {
     height: 12vh;
     width: auto;
 }
 
-.divnav-logo img{
+.divnav-logo img {
     height: 100%;
     max-height: 100%;
     min-width: 100%;
 }
 
-.logo-texto{
+.logo-texto {
     line-height: auto;
     color: white;
     display: grid;
@@ -47,18 +50,20 @@ nav{
     text-align: center;
     white-space: nowrap;
 }
-.logo-texto p:first-child{
+
+.logo-texto p:first-child {
     font-family: 'Street', sans-serif;
     font-weight: bold;
     font-size: 28px;
 }
-.logo-texto p:nth-child(2){
+
+.logo-texto p:nth-child(2) {
     font-size: 10px;
-    font-family: 'Street',sans-serif;
+    font-family: 'Street', sans-serif;
 }
 
 
-.menu{
+.menu {
     height: auto;
     width: auto;
     display: flex;
@@ -67,12 +72,14 @@ nav{
     text-align: center;
     transition: transform 0.3s ease;
 }
-.menu li{
+
+.menu li {
     list-style: none;
     padding: 15px;
     margin: 0 5px;
 }
-.menu .menu-i{
+
+.menu .menu-i {
     font-family: 'Street', sans-serif;
     font-size: 14px;
     color: white;
@@ -80,7 +87,7 @@ nav{
     transition: all 0.3s ease;
 }
 
-.menu .menu-i:hover{
+.menu .menu-i:hover {
     color: rgb(0, 0, 0);
     background-color: rgb(212, 182, 7);
     border-radius: 8px;
@@ -89,14 +96,15 @@ nav{
 
 
 
-.div-btn{
+.div-btn {
     width: auto;
     height: 12vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.menu-btn{
+
+.menu-btn {
     font-size: 36px;
     cursor: pointer;
     display: none;
@@ -107,11 +115,12 @@ nav{
 }
 
 
-@media screen and (max-width: 720px){
-    nav{
+@media screen and (max-width: 720px) {
+    nav {
         position: fixed;
     }
-    .menu-btn{
+
+    .menu-btn {
         height: 100%;
         width: 100%;
         padding: 10px;
@@ -120,7 +129,8 @@ nav{
         text-align: center;
         text-decoration: none;
     }
-    .menu{
+
+    .menu {
         height: 88vh;
         width: 100%;
         position: fixed;
@@ -133,7 +143,8 @@ nav{
         transition: transform 0.5s ease;
         transform: translateX(-100%);
     }
-    .menu li{
+
+    .menu li {
         width: 100%;
         height: 12%;
         display: flex;
@@ -142,17 +153,20 @@ nav{
         list-style: none;
         padding: 15px;
     }
-    .menu .menu-i:hover{
+
+    .menu .menu-i:hover {
         color: rgb(0, 0, 0);
         font-size: 18px;
         background-color: rgb(212, 182, 7);
         border-radius: 15px;
         padding: 6px;
     }
-    .menu.active{
+
+    .menu.active {
         transform: translateX(0);
     }
 }
+
 /*Fin CSS para Barra de navegación*/
 
 
@@ -192,12 +206,13 @@ footer {
     margin: 1px 0;
 }
 
-.p1{
+.p1 {
     font-family: 'Street', sans-serif;
     font-size: 16px;
     font-weight: bold;
 }
-.p2{
+
+.p2 {
     font-family: 'Street', sans-serif;
     font-size: 8px;
 }
@@ -210,11 +225,11 @@ footer {
 
 
 .redes-div img {
-    width: 30px; 
+    width: 30px;
     height: auto;
 }
 
-.ayuda-footer{
+.ayuda-footer {
     width: auto;
     color: white;
     font-family: 'Street', sans-serif;
@@ -230,7 +245,8 @@ footer {
 .ul-footer li {
     margin: 7px 0px;
 }
-.ul-footer li>a{
+
+.ul-footer li>a {
     color: white;
 }
 
@@ -239,7 +255,7 @@ footer {
     margin-top: 5px;
 }
 
-.contacto-footer p{
+.contacto-footer p {
     font-family: 'Street', sans-serif;
     font-size: 12px;
     font-weight: lighter;
@@ -250,11 +266,11 @@ footer {
 
 
 /*Configuracion del body*/
-body{
+body {
     width: 100%;
     min-height: 100vh;
     background-color: rgb(189, 92, 92);
-    display:flex;
+    display: flex;
     flex-direction: column;
 }
 
@@ -264,33 +280,93 @@ body{
 
 /*A partir de aquí va el css para aplicar a su sección*/
 
-main{
+main {
     /*te recomiendo dejar estas 2 tal cual*/
     margin-top: 12vh;
     flex-grow: 1;
     /*segui agregando opciones acá abajo*/
-    height: 100% ;
+    height: 100%;
     width: 100%;
+
 }
 
-.div-Titulo{
+#contentItemsCarrusel {
 
-  text-align: center;
-  background-color: yellow;
+    height: 110vh;
+    overflow: hidden;
+
+
 }
-.div-contenedor{
-    height: 80vh ;
+
+.itemCarrusel {
+
+
+    height: 100%;
+    position: relative;
+}
+
+.tarjetaCarrusel {
+
+
+    height: 100%;
+}
+
+.flechasCarrusel {
+
+
+
+    position: absolute;
+    font-size: 4em;
+    top: 0;
+    height: 100%;
     width: 100%;
-   
-    text-align: center;
-    background-color: yellowgreen;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
-    
+    justify-content: space-between;
+   /* padding: 30px;*/
+    opacity: 0.5;
 }
-.div-main{
 
-    background-color: blue;
+/*
+   #tarjetaCarrusel-1{
+      
+       background-color: blueviolet;
+   
+   }
+   #tarjetaCarrusel-2{
+      
+       background-color: blue;
+   
+   }
+   #tarjetaCarrusel-3{
+      
+       background-color: aqua;
+   
+   }*/
+a {
+    text-decoration: none;
+}
+
+i {
+    color: black;
+}
+
+#contePuntos {
+    display: flex;
+    justify-content: space-around;
+    background-color: grey;
+    opacity: 0.9;
+}
+
+#contePuntos>a {
+    font-size: 2em;
+    font-style: none;
+    color: black;
+
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
