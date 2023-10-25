@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/f11135c828.js" crossorigin="anonymous"></script>
     <link rel="icon" href="./img/NonotonoFavicon1.ico" class="favicon" type="image/logo-icon">
+
     <link rel="stylesheet" href="./css/styles.css" type="text/css">
     <title>Nonotoño | Tradición en Alfajores</title>
 </head>
@@ -13,13 +14,15 @@
     <nav class="nav">
         <div class="logoYtexto">
             <div class="divnav-logo">
-            <!--<img src="./img/LogoBarnav-blanco.png" alt="barnav-logo">-->
-                <img src="./img/NonoLogo-Blanco.png" alt="barnav-logo">
+                <a href="./index.html"><img src="./img/NonoLogo-Blanco.png" alt="barnav-logo"></a>
             </div>
             <div class="logo-texto">
-                <p>NonoToño</p>
-                <p>TRADICIÓN EN ALFAJORES</p>
+                <a href="./index.html">
+                    <p>NonoToño</p>
+                    <p>TRADICIÓN EN ALFAJORES</p>
+                </a>
             </div>
+            <!---->
         </div>
         <div class="menu-div">
             <ul class="menu">
@@ -38,37 +41,59 @@
         </div>
     </nav>
     <!--Estructura de la sección correspondiente-->
+    <a class="btn-wsp" href="https://api.whatsapp.com/send?phone=541128653709&text=Hola%20Roxana%20%20quiero%20m%C3%A1s%20informaci%C3%B3n%20de%20los%20%20alfajores.." target="_blank">
+        <!-- <i class="icon-whatsapp" href="./img/whatsapp.png"></i> -->
+        <img src="./img/whatsapp2.png" alt="wsp-icon">
+    </a>
     <main>
         <div class="portada">
-            <div class="portada-text">
-                <p class="nonotono">Nonotoño</p><br>
-                <p class="permitido">NUESTRO PERMITIDO DEL DÍA</p>
-            </div>
+            <div class="side2-portada"></div>
+            <div class="side1-portada"></div>
         </div>
 
         <div class="div-product">
-            <h2>Dale un vistazo nuestros productos</h2>
-            <div class="galeria">
-                <div>
-                    <button>producto1</button>
+            <h2>¡Descubre nuestra variedad de productos!</h2>
+            <p>Te invitamos a explorar nuestra selección de exquisitos alfajores, cada uno con su sabor único y delicioso.</p>
+            <p>Encontrarás una amplia gama de opciones para satisfacer tu paladar.</p>
+        </div>
+        <div class="div-product2">
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="slide">
+                        <img src="./img/indeximg/1negrochocolate.jpg" alt="Imagen 1">
+                    </div>
+                    <div class="slide">
+                        <img src="./img/indeximg/2dulcedeleche.jpg" alt="Imagen 2">
+                    </div>
+                    <div class="slide">
+                        <img src="./img/indeximg/3membrillo-con-caja.png" alt="Imagen 3">
+                    </div>
                 </div>
-                <div>
-                    <button>producto2</button>
-                </div>
+                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next" onclick="changeSlide(1)">&#10095;</a>
             </div>
+        </div>
+        <div class="div-product3">
+            <a href="./productos.html"><button class="btn-product">Ver productos</button></a>
         </div>
 
         <div class="div-historia">
-            <p>Conocé nuestra historia</p>
+            <div class="texto-historia">
+                <p>Sumérgete en nuestro legado y viaja a través del tiempo. Haz clic en 'Conoce nuestra historia' para desvelar los secretos detrás de nuestra trayectoria.</p>
+            </div>
+            <div class="btn-historia">
+                <a href="./nosotros.html">
+                    <img src="./img/Banners/historia1.jpg" alt="historia-img">
+                </a>
+            </div>
         </div>
 
         <div class="sucursales">
             <div class="sucursales-text">
-                <p>Cada vez más cerca tuyo</p>
-                <button>Sucursales</button>
+                <a href="./contacto.html"><img src="./img/Banners/veni.jpg" alt="visitanos-img"></a>
             </div>
-            <div class="mapa">Mapa 1</div>
-            <div class="mapa">Mapa 2</div>
+            <div class="mapa"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.893745250835!2d-58.713895625456956!3d-34.65738626033243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbf9384b2b619%3A0xb3eb43742e5e3d55!2sAr%C3%A1oz%201056%2C%20San%20Antonio%20de%20Padua%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1698231263977!5m2!1ses-419!2sar" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+            <div class="mapa"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13126.046620199335!2d-58.74724104864123!3d-34.6670339609219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbffb2a7530c3%3A0x92b7136bcfbb5e59!2sSuipacha%20789%2C%20B1722MWH%20Merlo%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1698198595418!5m2!1ses-419!2sar" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
         </div>
     </main>
     
@@ -85,28 +110,22 @@
                     <p class="p1">NonoToño</p>
                     <p class="p2">TRADICIÓN EN ALFAJORES</p>
                 </div>
-            
-                <div class="redes-div">
-                    <a href="#" target="_blank"><img src="./img/facebook.png" alt="fb-icon"></a>
-                    <a href="#" target="_blank"><img src="./img/instagram.png" alt="ig-icon"></a>
-                    <a href="#" target="_blank"><img src="./img/whatsapp.png" alt="wsp-icon"></a>
-                </div>
             </div>
-            <div class="ayuda-footer">
-                <p>Navegación:</p>
-                <ul class="ul-footer">
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Productos</a></li>
-                    <li><a href="#">Redes</a></li>
-                </ul>
-            </div>
+
             <div class="contacto-footer">
-                <p>Contactanos: </p>
-                <p>email.asd@mail.com.ar</p>
-                <p>11 12345678</p>
-                <p>Av. Siempre de membrillo - 1234</p>
-                <p>Av. A veces de maicena - 4321</p>
+                <p>Contactanos:</p>
+                <p>nonotonoalfajores@gmail.com</p>
+                <p>+54 11 2865-3709</p>
+                <p>Araoz 1056 - San Antonio de Padua, Argentina</p>
+            </div>
+
+            <div class="redes-div">
+                <p>Seguinos en:</p>
+                <div class="redes-icons">
+                    <a href="https://www.facebook.com/nonotonotradicionenalfajores" target="_blank"><img src="./img/facebook.png" alt="fb-icon"></a>
+                    <a href="https://www.instagram.com/nonotono_oficial/" target="_blank"><img src="./img/instagram.png" alt="ig-icon"></a>
+                </div>
+
             </div>
         </div>
     </footer>

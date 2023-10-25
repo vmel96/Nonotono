@@ -20,17 +20,18 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 0 5px;
+    z-index: 1000;
 }
 
 .logoYtexto{
-    max-width: 20%;
     display: flex;
     align-items:center;
     justify-content:space-between;
 }
+
 .divnav-logo{
     height: 12vh;
-    width: auto;
+    width: 100%;
 }
 
 .divnav-logo img{
@@ -41,7 +42,6 @@ nav{
 
 .logo-texto{
     line-height: auto;
-    color: white;
     display: grid;
     grid-template-rows: auto 1fr;
     text-align: center;
@@ -51,10 +51,14 @@ nav{
     font-family: 'Street', sans-serif;
     font-weight: bold;
     font-size: 28px;
+    text-decoration: none;
+    color: white;
 }
 .logo-texto p:nth-child(2){
     font-size: 10px;
     font-family: 'Street',sans-serif;
+    text-decoration: none;
+    color: white;
 }
 
 
@@ -82,9 +86,10 @@ nav{
 
 .menu .menu-i:hover{
     color: rgb(0, 0, 0);
-    background-color: rgb(212, 182, 7);
+    background-color: rgb(255, 255, 255);
     border-radius: 8px;
     padding: 5px 0px;
+    transition: ease 0.8s;
 }
 
 
@@ -107,18 +112,19 @@ nav{
 }
 
 
-@media screen and (max-width: 720px){
+@media screen and (max-width: 800px){
     nav{
         position: fixed;
     }
     .menu-btn{
         height: 100%;
         width: 100%;
-        padding: 10px;
+        /*padding: 10px;*/
         display: flex;
         justify-content: center;
         text-align: center;
         text-decoration: none;
+        margin-right: 25px;
     }
     .menu{
         height: 88vh;
@@ -145,7 +151,7 @@ nav{
     .menu .menu-i:hover{
         color: rgb(0, 0, 0);
         font-size: 18px;
-        background-color: rgb(212, 182, 7);
+        background-color: rgb(255, 255, 255);
         border-radius: 15px;
         padding: 6px;
     }
@@ -158,10 +164,11 @@ nav{
 
 /*CSS Para el Footer*/
 footer {
+    width: 100%;
     background-color: #000000;
     color: white;
     padding: 5px 0;
-    width: 100%;
+
 }
 
 .footer-container {
@@ -184,8 +191,8 @@ footer {
 }
 
 .img-footer img {
-    width: 50px;
-    height: auto;
+    width: auto;
+    height: 10vh;
 }
 
 .p-footer p {
@@ -194,45 +201,36 @@ footer {
 
 .p1{
     font-family: 'Street', sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
 }
 .p2{
     font-family: 'Street', sans-serif;
-    font-size: 8px;
+    font-size: 12px;
 }
 
 .redes-div {
+    font-family: 'Street', sans-serif;
+    font-size: 16px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 10px;
 }
 
-
 .redes-div img {
-    width: 30px; 
-    height: auto;
+    width: auto; 
+    height: 10vh;
+}
+.redes-icons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.ayuda-footer{
-    width: auto;
-    color: white;
-    font-family: 'Street', sans-serif;
-    font-size: 12px;
-}
 
-.ul-footer {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-}
-
-.ul-footer li {
-    margin: 7px 0px;
-}
-.ul-footer li>a{
-    color: white;
-}
 
 .contacto-footer {
     width: auto;
@@ -241,11 +239,40 @@ footer {
 
 .contacto-footer p{
     font-family: 'Street', sans-serif;
-    font-size: 12px;
-    font-weight: lighter;
+    font-size: 16px;
     margin-bottom: 8px;
 }
 
+@media screen and (max-width: 800px){
+    .footer-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .logo-footer{
+        height: auto;
+        width: 100%;
+        margin: 15px 0px;
+    }
+    .contacto-footer{
+        height: auto;
+        width: 100%;
+        margin: 15px 0px;
+        text-align: center;
+    }
+    .redes-div{
+        height: auto;
+        width: 100%;
+        margin: 15px 0px;
+        text-align: center;
+    }
+    .redes-icons{
+        justify-content: center;
+        gap: 15px;
+    }
+}
 /*Fin CSS para Footer*/
 
 
@@ -253,7 +280,7 @@ footer {
 body{
     width: 100%;
     min-height: 100vh;
-    background-color: rgb(189, 92, 92);
+    background-color: black;
     display:flex;
     flex-direction: column;
 }
@@ -274,84 +301,358 @@ main{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: rgb(20, 31, 43);
+    /*background-color: rgb(20, 31, 43);*/
+    background-image: url('../img/Fondotextura.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: whitesmoke;
 }
+/* ---------------------------------------------- Boton WSP ------------------------------------------*/
+.btn-wsp{
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0, 0 , 0, 0.5);
+    z-index: 100;
+}
+.btn-wsp:hover{
+    transition: ease 0.8s;
+    scale: 1.1;
+}
+/* ---------------------------------------------- FIN Boton WSP ------------------------------------------*/
+
 
 .portada{
-    height: 65vh;
+    height: 80vh;
     width: 100%;
-    margin-bottom: 2vh;
+    background-color: black;
     display: flex;
     justify-content: last baseline;
     align-items: center;
-    background-image: url(../img/portada-background.jpg);
+}
+
+.side1-portada{
+    height: 88vh;
+    width: 50%;
+    background-size: cover;
+    background-position: center center;
+    animation: backgroundTansition 16s infinite;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.side2-portada{
+    height: 88vh;
+    width: 50%;
+    background-image: url(../img/Banners/BannerIndex.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
-.portada-text{
-    height: 40vh;
-    width: 25%;
-    margin-left: 70%;
-    background-color: rgba(27, 43, 59, 0.7);
-    align-self: flex-start;
-}
+
 
 .div-product{
-    height: 50vh;
+    height: auto;
     width: 100%;
-    margin: 2vh;
+    margin: 50px 0px;
+    font-family: 'Street', sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-}
-.div-product h2{
-    width: 100%;
-    color: white;
-    background-color: rgb(73, 39, 104);
     text-align: center;
 }
+.div-product p{
+    font-size: 18px;
+}
 
-.galeria{
-    height: 100%;
+.div-product2{
+    height: auto;
     width: 100%;
-    background-color: rgb(196, 173, 218);
+    /*background-image: url(../img/Banners/FondoCuero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;*/
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
-.galeria div{
+
+/*----------------------Slider -------------------------------------------------------------------------------------*/
+.carousel-container {
     height: 100%;
-    width: 45%;
-    background-color: rgb(21, 4, 36);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.carousel {
+    height: 100%;
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.slide {
+    flex: 0 0 100%;
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+img {
+    max-height: 720px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.div-historia{
-    height: 25vh;
-    width: 100%;
-    margin-top: 3vh;
-    color: aliceblue;
+.prev,.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.prev:hover,.next:hover{
+    scale: 1.1;
+    transition: ease 0.7s;
+}
+
+.prev {
+    left: 5%;
+    font-size: 40px;
+    padding: 1px 10px;
+    color: white;
     background-color: black;
-    text-align: left;
+    border-radius: 10px;
+}
+
+.next {
+    right: 5%;
+    font-size: 40px;
+    padding: 1px 10px;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+}
+/*------------------------------- FIN SLIDER ------------------------------------------------------------*/
+.div-product3{
+    width: 100%;
+    margin: 15px 0px;
+    text-align: center;
+}
+.btn-product{
+    height: 40px;
+    width: 40%;
+    font-family: 'Street', sans-serif;
+    font-size: 18px;
+    color: white;
+    background-color: black;
+    border-style: none;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    border: 1px solid white;
+}
+.btn-product:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 126, 51);
+    transition: ease 0.7s;
+    scale: 1.1;
+}
+
+
+.div-historia{
+    height: auto;
+    width: 100%;
+    margin-top: 60px;
+    padding: 10px 0px;
+    color: rgb(255, 255, 255);
+    background-image: url(../img/Banners/FondoCuero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.texto-historia{
+    width: 45%;
+    font-family: 'Street', sans-serif;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-align: center;
+    text-wrap: wrap;
+    text-shadow: 3px 3px 3px rgba(255, 255, 255, 0.3)
+}
+.btn-historia{
+    height: 100%;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-historia img{
+    height: 30vh;
+    width: auto;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px 0px rgba(255, 255, 255, 0.5);
+}
+.btn-historia img:hover{
+    scale: 0.95;
+    transition: ease-out 0.5s;
 }
 
 .sucursales{
-    height: 30vh;
+    height: auto;
     width: 100%;
-    margin: 2vh;
+    margin: 60px 0px;
+    padding: 15px 0px;
+    background-image: url(../img/Banners/FondoMadera2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 .sucursales div{
     height: 95%;
-    width: 32%;
-    background-color: rgb(14, 49, 38);
+    width: 30%;
+    /*background-color: rgb(14, 49, 38);*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+}
+.sucursales-text a{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sucursales-text img{
+    width: 90%;
+    height: 70%;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.sucursales-text img:hover{
+    scale: 0.95;
+    transition: ease-out 0.5s;
+}
+.sucursales iframe{
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/*Keyframe transicion -------------------------------------------------------------------------------------*/
+@keyframes backgroundTansition{
+    0%, 100% {
+        background-image: url('../img/indeximg/blancoVSnegro-recortado.jpg');
+    }
+    25% {
+        background-image: url('../img/indeximg/membrilloVSfrutilla-recortado.jpg');
+    }
+    50% {
+        background-image: url('../img/indeximg/portada-renovan2cut.jpg');
+    }
+    75% {
+        background-image: url('../img/indeximg/variedad3-cut.jpg');
+    }
+}
+
+
+
+
+/* Punto de corte ---------------------------------------------------------------------------------------- */
+@media screen and (max-width: 800px){
+    .portada{
+        height: 80vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center ;
+        align-items: center;
+    }
+    .side1-portada{
+        height: 40vh;
+        width: 100%;
+
+    }
+    .side2-portada{
+        height: 40vh;
+        width: 100%;
+    }
+
+    .div-historia{
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 2px;
+    }
+    .texto-historia{
+        width: 100%;
+        font-family: 'Street', sans-serif;
+        font-size: 20px;
+    }
+    .btn-historia{
+        width: 100%;
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sucursales{
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .sucursales div{
+        height: auto;
+        width: 95%;
+        margin: 10px 0px;
+    }
+    .sucursales iframe{
+        width: 90%;
+    }
 }
