@@ -1,11 +1,12 @@
-*{
+* {
     padding: 0;
     margin: 0;
     text-decoration: none;
 }
+
 @font-face {
-    font-family: 'Street'; 
-    src: url('../font/STREET__.ttf') format('truetype'); 
+    font-family: 'Street';
+    src: url('../font/STREET__.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -13,24 +14,25 @@
 /*CSS para la Barra de navegación */
 nav{
     width: 100%;
-    height: 12vh;
+    height: 13vh;
     position: fixed;
     background-color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 5px;
+    z-index: 1000;
 }
 
 .logoYtexto{
-    max-width: 20%;
     display: flex;
     align-items:center;
     justify-content:space-between;
 }
+
 .divnav-logo{
     height: 12vh;
-    width: auto;
+    width: 100%;
 }
 
 .divnav-logo img{
@@ -41,7 +43,6 @@ nav{
 
 .logo-texto{
     line-height: auto;
-    color: white;
     display: grid;
     grid-template-rows: auto 1fr;
     text-align: center;
@@ -51,10 +52,14 @@ nav{
     font-family: 'Street', sans-serif;
     font-weight: bold;
     font-size: 28px;
+    text-decoration: none;
+    color: white;
 }
 .logo-texto p:nth-child(2){
     font-size: 10px;
     font-family: 'Street',sans-serif;
+    text-decoration: none;
+    color: white;
 }
 
 
@@ -82,9 +87,10 @@ nav{
 
 .menu .menu-i:hover{
     color: rgb(0, 0, 0);
-    background-color: rgb(212, 182, 7);
+    background-color: rgb(255, 255, 255);
     border-radius: 8px;
     padding: 5px 0px;
+    transition: ease 0.8s;
 }
 
 
@@ -107,24 +113,25 @@ nav{
 }
 
 
-@media screen and (max-width: 720px){
+@media screen and (max-width: 800px){
     nav{
         position: fixed;
     }
     .menu-btn{
         height: 100%;
         width: 100%;
-        padding: 10px;
+        /*padding: 10px;*/
         display: flex;
         justify-content: center;
         text-align: center;
         text-decoration: none;
+        margin-right: 25px;
     }
     .menu{
         height: 88vh;
         width: 100%;
         position: fixed;
-        top: 12vh;
+        top: 13vh;
         left: 0;
         background: rgb(77, 74, 74);
         justify-content: center;
@@ -145,7 +152,7 @@ nav{
     .menu .menu-i:hover{
         color: rgb(0, 0, 0);
         font-size: 18px;
-        background-color: rgb(212, 182, 7);
+        background-color: rgb(255, 255, 255);
         border-radius: 15px;
         padding: 6px;
     }
@@ -153,6 +160,7 @@ nav{
         transform: translateX(0);
     }
 }
+
 /*Fin CSS para Barra de navegación*/
 
 
@@ -162,6 +170,8 @@ footer {
     color: white;
     padding: 5px 0;
     width: 100%;
+    margin-top: 30px;
+    flex-grow: 2;
 }
 
 .footer-container {
@@ -184,8 +194,8 @@ footer {
 }
 
 .img-footer img {
-    width: 50px;
-    height: auto;
+    width: auto;
+    height: 10vh;
 }
 
 .p-footer p {
@@ -194,44 +204,34 @@ footer {
 
 .p1{
     font-family: 'Street', sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
 }
 .p2{
     font-family: 'Street', sans-serif;
-    font-size: 8px;
+    font-size: 12px;
 }
 
 .redes-div {
+    font-family: 'Street', sans-serif;
+    font-size: 16px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 10px;
 }
 
 
 .redes-div img {
-    width: 30px; 
-    height: auto;
+    width: auto; 
+    height: 10vh;
 }
-
-.ayuda-footer{
-    width: auto;
-    color: white;
-    font-family: 'Street', sans-serif;
-    font-size: 12px;
-}
-
-.ul-footer {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-}
-
-.ul-footer li {
-    margin: 7px 0px;
-}
-.ul-footer li>a{
-    color: white;
+.redes-icons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .contacto-footer {
@@ -241,20 +241,52 @@ footer {
 
 .contacto-footer p{
     font-family: 'Street', sans-serif;
-    font-size: 12px;
-    font-weight: lighter;
+    font-size: 16px;
     margin-bottom: 8px;
+}
+
+@media screen and (max-width: 800px){
+    .footer-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .logo-footer{
+        height: auto;
+        width: 100%;
+        margin: 15px 0px;
+    }
+    .contacto-footer{
+        height: auto;
+        width: 100%;
+        margin: 15px 0px;
+        text-align: center;
+    }
+    .redes-div{
+        height: auto;
+        width: 100%;
+        margin: 15px 0px;
+        text-align: center;
+    }
+    .redes-icons{
+        justify-content: center;
+        gap: 15px;
+    }
 }
 
 /*Fin CSS para Footer*/
 
 
 /*Configuracion del body*/
-body{
+body {
     width: 100%;
     min-height: 100vh;
-    background-color: rgb(189, 92, 92);
-    display:flex;
+    background-image: url(../img/Fondotexturaestrellas.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
     flex-direction: column;
 }
 
@@ -264,33 +296,130 @@ body{
 
 /*A partir de aquí va el css para aplicar a su sección*/
 
-main{
+main {
     /*te recomiendo dejar estas 2 tal cual*/
-    margin-top: 12vh;
+    margin-top: 13vh;
     flex-grow: 1;
     /*segui agregando opciones acá abajo*/
-    height: 100% ;
+    height: 100%;
     width: 100%;
+
 }
 
-.div-Titulo{
+/* ---------------------------------------------- Boton WSP ------------------------------------------*/
 
-  text-align: center;
-  background-color: yellow;
-}
-.div-contenedor{
-    height: 80vh ;
-    width: 100%;
-   
+.btn-wsp{
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 50px;
     text-align: center;
-    background-color: yellowgreen;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0, 0 , 0, 0.5);
+    z-index: 100;
 }
-.div-main{
+.btn-wsp img{
+    width: 100%;
+    height: 100%;
+}
 
-    background-color: blue;
+.btn-wsp:hover{
+    transition: ease 0.8s;
+    scale: 1.1;
+}
+/* ---------------------------------------------- FIN Boton WSP ------------------------------------------*/
+
+#contentItemsCarrusel {
+    margin-top: 30px;
+    height: 720px;
+    width: 100%;
+    overflow: hidden;
+
+
+
+}
+
+.itemCarrusel {
+
+
+    height: 100%;
+    position: relative;
+}
+
+.tarjetaCarrusel {
+
+
+    height: 100%;
+}
+
+.flechasCarrusel {
+
+
+
+    position: absolute;
+    font-size: 4em;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*padding: 30px;*/
+    opacity: 0.5;
+
+}
+
+/*
+   #tarjetaCarrusel-1{
+      
+       background-color: blueviolet;
+   
+   }
+   #tarjetaCarrusel-2{
+      
+       background-color: blue;
+   
+   }
+   #tarjetaCarrusel-3{
+      
+       background-color: aqua;
+   
+   }*/
+a {
+    text-decoration: none;
+}
+
+i {
+    color: black;
+}
+
+#contePuntos {
+    display: flex;
+    justify-content: space-around;
+    background-color: grey;
+    opacity: 0.9;
+}
+
+#contePuntos>a {
+    font-size: 2em;
+    font-style: none;
+    color: black;
+
+}
+
+img {
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 800px){
+    #contentItemsCarrusel {
+        height: 400px;
+        width: 100%;
+    }
 }
